@@ -1,1 +1,1 @@
-# python-list-exercises
+# python-loop-exercises
