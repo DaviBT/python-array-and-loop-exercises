@@ -9,6 +9,6 @@ years = 0
 while countryA < countryB:
     countryA = countryA * growthA
     countryB = countryB * growthB
-    years += 1
+    years += 1 ## years = years + 1
 
 print(f"It will be need {years} to country A overtake country B.")
