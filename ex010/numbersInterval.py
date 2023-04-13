@@ -14,16 +14,16 @@ while g < 1:
     finalNumberInput = int(finalNumberInput)
     if finalNumberInput < 1:
         print("Enter a number above one.")
-    elif finalNumberInput > numberInput:
+    elif numberInput > finalNumberInput:
         numberInput, finalNumberInput = finalNumberInput, numberInput
         g = 1
     else:
         print(f"The number {finalNumberInput} is valid!")
         g = 1
 
-intervalNumbers = list(range(numberInput, finalNumberInput))
-nums = []
-for i in intervalNumbers:
-    nums.append(i)
-
-print(nums)
+intervalNumbers = finalNumberInput - numberInput
+print(intervalNumbers)
+i = numberInput + 1
+while i < numberInput:
+    numberInput += 1
+    print(numberInput)
