@@ -11,4 +11,4 @@ while countryA < countryB:
     countryB = countryB * growthB
     years += 1 ## years = years + 1
 
-print(f"It will be need {years} to country A overtake country B.")
+print(f"It will be need {years} years to country A overtake country B.")
