@@ -1,29 +1,24 @@
-p = 0
-while p < 1:
-    numberInput = input("Enter a number: ")
-    numberInput = int(numberInput)
-    if numberInput < 1:
-        print("Enter a number above 1!")
-    else:
-        print(f"The number {numberInput} is valid!")
-        p = 1
+numList = []
 
-g = 0
-while g < 1:
-    finalNumberInput = input("Enter another number: ")
-    finalNumberInput = int(finalNumberInput)
-    if finalNumberInput < 1:
-        print("Enter a number above one.")
-    elif numberInput > finalNumberInput:
-        numberInput, finalNumberInput = finalNumberInput, numberInput
-        g = 1
-    else:
-        print(f"The number {finalNumberInput} is valid!")
-        g = 1
+## input and transforming the number into int and putting in a array
+for num in range(2):
+    numberInput = input(f"Enter number {num+1}: ")
+    intNumber = int(numberInput)
+    numList.append(intNumber)
 
-intervalNumbers = finalNumberInput - numberInput
-print(intervalNumbers)
-i = numberInput + 1
-while i < numberInput:
-    numberInput += 1
-    print(numberInput)
+## selecting the bigger and smallest number
+maxNum = max(numList)
+minNum = min(numList)
+
+## creating a list that contains the smallest number to the bigger one
+intervalList = list(range(minNum, maxNum + 1))
+
+## getting the lenth of the array
+lenIntervalList = len(intervalList)
+## excluding the last number of the array
+intervalList.pop(lenIntervalList - 1)
+
+## deleting the first number of the array
+intervalList.pop(0)
+
+print(intervalList)
